@@ -4,6 +4,9 @@ h1 {
 }
 
 .robots {
+	width: 100%;
+	height: auto;
+	position: relative;
 }
 
 .head, 
@@ -12,7 +15,7 @@ h1 {
 .right_arm, 
 .left_leg, 
 .right_leg {
-	 background-color: #5f93e8;
+	 background-color: #67E300;
 }
 
 .head { 
@@ -21,28 +24,62 @@ h1 {
 	height: 150px; 
 	border-radius: 200px 200px 0 0; 
 	margin-bottom: 10px;
+	transition: 1s ease-in-out;
 } 
 
 .eyes {
-	
+	display: flex;
 }
 
 .head:hover {
 	width: 300px;
-    transition: 1s ease-in-out;
+ 
+}
+
+.head:hover .eyes {
+	animation:  watcher 5s linear both infinite;
+}
+
+@keyframes watcher {
+	 0%{
+		transform: translateX(0);
+	} 
+	25%{
+		transform: translateX(-15px);
+	}
+	75%{
+		transform: translateX(100px);
+	}
+	100%{
+			transform: translateX(0);
+	}
+	
 }
 
 .upper_body { 
 	width: 300px; 
 	height: 150px;
 	display: flex; 
+	margin:0 auto;
 } 
 
 .left_arm, .right_arm { 
+	position: relative;
 	width: 40px; 
 	height: 125px;
 	border-radius: 100px; 
 } 
+.left_arm::before, .right_arm::before{
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	width: 35px; 
+	height: 120px;
+	border-radius: 100px; 
+	transform: translate(-50%,-50%);
+	background: linear-gradient(to bottom, rgba(150, 250, 00, 0.8) 15%,  #67E300 100%);
+}
 
 .left_arm { 
 	margin-right: 10px; 
@@ -66,10 +103,13 @@ h1 {
 
 } 
 
-.left_leg, .right_leg { 
+.left_leg, .right_leg {
+	display: inline-block; 
 	width: 40px; 
 	height: 120px;
 	border-radius: 0 0 100px 100px; 
+	transition: 1s ease-in-out;
+
 } 
 
 .left_leg { 
@@ -82,6 +122,13 @@ h1 {
     -o-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
+}
+.right_leg:hover {
+	-webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
 }
 
 .right_leg { 
@@ -109,7 +156,23 @@ h1 {
 	left: 120px; 
 }
 
-
-
+.greeting{
+	opacity: 0;
+	position: absolute;
+	top:0;
+	right:25%;
+	padding: 15px;
+	text-transform: uppercase;
+	border:1px solid rgba(10,10,10, 0.8);	
+	border-top-right-radius:5px;	
+	border-bottom-right-radius:5px;
+	border-top-left-radius: 50%;	
+	border-bottom-left-radius: 50%;	
+	background-color: rgba(250,250,250, 0.8);
+	transition: 1s ease-in-out;
+}
+.upper_body:hover .greeting{
+	opacity: 1;
+}
 
 
