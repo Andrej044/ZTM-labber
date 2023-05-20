@@ -16,6 +16,7 @@ a{
 .zone {
     /* padding:30px 50px;
     margin:40px 60px; */
+    text-align: center;
     cursor:pointer;
     display:inline-block;
     color:#FFF;
@@ -67,7 +68,6 @@ a{
  **********************************************************************/
 .red{
     height:50vh;
-    text-align: center;
     
     background: #C655BE; /* Old browsers */
     background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
@@ -102,4 +102,61 @@ a{
     background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+.gallery-list{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    gap:10px;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 1024px){ 
+    .gallery-list{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 850px){ 
+    .header-nav{
+        font-size: 1.5rem;
+    }
+    .gallery-item:last-child{
+        grid-column: 2/4;
+    }
+}
+@media (max-width: 630px){ 
+    .header-nav{
+        font-size: 1.2rem;
+    }
+    .gallery-item:last-child{
+        grid-column: 2/3;
+    }
+}
+@media (max-width: 488px){ 
+    .header-nav{
+        flex-direction: column;
+    }
+    .header-nav>li{
+        padding-top: 10px;
+    }
+    .header-nav>li:last-child{
+        margin-left: 0;
+    }
+}
+@media (max-width: 430px){ 
+    .gallery-item:last-child{
+        grid-column: 1/2;
+    }
+}
+.gallery-item {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 1.5rem;
+    background-color: rgba(50, 50, 50, .9);
+}
+.gallery-item img {
+    height: 50%;
+    width: auto;
 }
