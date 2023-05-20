@@ -9,6 +9,7 @@ ul{
     list-style: none;
 }
 a{
+    color:#FFF;
     text-decoration: none;
 }
 
@@ -44,7 +45,21 @@ a{
     background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
     background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
 
-
+}
+.header-nav{
+    display: flex;
+}
+.header-nav>li:last-child{
+    margin-left: auto;
+}
+.header-link{
+    padding: 5px 10px;
+}
+.header-link:hover{
+    background-color: rgba(150,150,150,0.8);
+    border-radius: 5px;
+    color: rgba(0,0,0,0.8);
+    transition: .5s ease-in-out;
 }
 
 /***********************************************************************
