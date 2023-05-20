@@ -1,6 +1,20 @@
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
 .zone {
-    padding:30px 50px;
-    margin:40px 60px;
+    /* padding:30px 50px;
+    margin:40px 60px; */
     cursor:pointer;
     display:inline-block;
     color:#FFF;
@@ -29,6 +43,8 @@
     background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
     background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+
+
 }
 
 /***********************************************************************
