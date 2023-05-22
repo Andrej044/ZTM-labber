@@ -10,6 +10,7 @@ function inputLength() {
 function createListElement() {
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
+	li.appendChild(createDeleteButton());
 	ul.appendChild(li);
 	input.value = "";
 }
@@ -44,6 +45,7 @@ button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
 
 liList.forEach(function(item){
+	
 	item.appendChild(createDeleteButton());
 	item.addEventListener("click",clickListener);
 });
