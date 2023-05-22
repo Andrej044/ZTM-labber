@@ -10,9 +10,13 @@ function inputLength() {
 
 function createListElement() {
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value));
+	let p = document.createElement("p");
+	
+	p.appendChild(document.createTextNode(input.value));
+	p.addEventListener("click",clickListener);
+	
+	li.appendChild(p)
 	li.appendChild(createDeleteButton());
-	li.addEventListener("click",clickListener);
 	ul.appendChild(li);
 	input.value = "";
 }
@@ -47,7 +51,7 @@ function clickListener(e){
 
 liList.forEach(function(item){
 	item.appendChild(createDeleteButton());
-	item.addEventListener("click",clickListener);
+	item.firstChild.addEventListener("click",clickListener);
 	item.lastChild.addEventListener("click", removeTask)
 });
 
@@ -55,7 +59,6 @@ liList.forEach(function(item){
 
 function removeTask(){
 	this.parentElement.remove();
-	console.log(this);
 }
 
 button.addEventListener("click", addListAfterClick);

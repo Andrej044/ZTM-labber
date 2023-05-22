@@ -18,7 +18,7 @@
     -30px 20px 40px dimgrey;
 }
 
-.done {
+.done{
   text-decoration: line-through;
 }
 li{
@@ -31,4 +31,5 @@ li{
 .btn {
   margin-left: 10px;
   padding: 10px;
+  text-decoration: dotted;
 }
