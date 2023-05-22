@@ -14,6 +14,13 @@ function createListElement() {
 	input.value = "";
 }
 
+function createDeleteButton(){
+	let btn = document.createElement("button");
+	btn.textContent = "DELETE TASK!!";
+	btn.classList.add("btn");
+	return btn;
+}
+
 function addListAfterClick() {
 	if (inputLength() > 0) {
 		createListElement();
@@ -37,5 +44,6 @@ button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
 
 liList.forEach(function(item){
-	item.addEventListener("click",clickListener)
+	item.appendChild(createDeleteButton());
+	item.addEventListener("click",clickListener);
 });
