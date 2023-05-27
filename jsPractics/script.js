@@ -75,4 +75,6 @@ const filterArray = array.filter(item => {
  return item.team === "red";
 } )
 
-console.log(filterArray)
+
+
+//Find out the total score of all users using reduce
