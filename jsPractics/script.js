@@ -78,3 +78,8 @@ const filterArray = array.filter(item => {
 
 
 //Find out the total score of all users using reduce
+
+
+const totalScore = array.reduce((accum, item)=>{
+  return accum += item.score
+}, 0)
