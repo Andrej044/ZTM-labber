@@ -69,3 +69,10 @@ const mapArray = array.map(item => item.username + "!");
 
 
 //Filter the array to only include users who are on team: red
+
+
+const filterArray = array.filter(item => {
+ return item.team === "red";
+} )
+
+console.log(filterArray)
