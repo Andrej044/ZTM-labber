@@ -56,3 +56,8 @@ const array = [
 
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames 
 
+const newArray = [];
+
+array.forEach(item => {
+  newArray.push(item.username = item.username + "!")
+})
