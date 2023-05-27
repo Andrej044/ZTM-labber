@@ -1,4 +1,5 @@
- const sum = (a) => {
+//practics clousers, carrying
+const sum = (a) => {
     let sum;    
     const innerFunc = (b) =>{
        
@@ -9,9 +10,7 @@
 
  let sum2 = sum(10)(20);
  let sum3 = sum(5)(15);
-
-
- console.log(sum2, sum3)
+let sumBy10 = sum(10);
 
 
  const counter = () => {
@@ -22,6 +21,35 @@
  }
 
  let counter1 = counter();
- console.log(counter1())
- console.log(counter1())
- console.log(counter1())
+
+
+// practics map, filter, reduce
+
+
+const array = [
+  {
+    username: "john",
+    team: "red",
+    score: 5,
+    items: ["ball", "book", "pen"]
+  },
+  {
+    username: "becky",
+    team: "blue",
+    score: 10,
+    items: ["tape", "backpack", "pen"]
+  },
+  {
+    username: "susy",
+    team: "red",
+    score: 55,
+    items: ["ball", "eraser", "pen"]
+  },
+  {
+    username: "tyson",
+    team: "green",
+    score: 1,
+    items: ["book", "pen"]
+  },
+
+];
