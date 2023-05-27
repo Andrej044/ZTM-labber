@@ -59,7 +59,11 @@ const array = [
 const newArray = [];
 
 array.forEach(item => {
-  newArray.push(item.username = item.username + "!")
+  newArray.push(item.username + "!")
 })
 
+
 //Create an array using map that has all the usernames with a "? to each of the usernames
+
+const mapArray = array.map(item => item.username + "!");
+console.log(mapArray)
