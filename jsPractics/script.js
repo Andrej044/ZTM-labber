@@ -128,5 +128,10 @@ amazonBasket = {
 }
 
 function checkBasket(basket, lookingFor) {
-
+  let answer;
+  for (item in basket) {
+    if(item === lookingFor) return item
+    else {answer = "this product is not in a basket" }
+  }
+  return answer
 }
