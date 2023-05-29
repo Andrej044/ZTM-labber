@@ -83,3 +83,25 @@ const filterArray = array.filter(item => {
 const totalScore = array.reduce((accum, item)=>{
   return accum += item.score
 }, 0)
+
+
+// Question #1:
+// create a function called biggestNumberInArray() that takes
+// an array as a parameter and returns the biggest number.
+// biggestNumberInArray([-1,0,3,100, 99, 2, 99]) should return 100;
+// Use at least 3 different types of javascript loops to write this:
+const arr = [-1,0,3,100, 99, 2, 99] // should return 100
+const arr2 = ['a', 3, 4, 2] // should return 4
+const arr3 = [] // should return 0
+
+function biggestNumberInArray(arr) {
+
+}
+
+function biggestNumberInArray2(arr) {
+
+}
+
+function biggestNumberInArray3(arr) {
+
+}
