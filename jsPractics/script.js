@@ -103,10 +103,17 @@ function biggestNumberInArray(arr) {
     return maxNumb;
 }
 
-console.log(biggestNumberInArray(arr));
 
 function biggestNumberInArray2(arr) {
-
-
+  if(arr.length === 0) return 0;
+  let maxNumb = arr[0];
+  
+  for (item of arr) {
+    maxNumb = maxNumb > item ? maxNumb : item;
+  }
+  return maxNumb;
+  
 }
 
+
+console.log(biggestNumberInArray2(arr));
