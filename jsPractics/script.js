@@ -89,19 +89,24 @@ const totalScore = array.reduce((accum, item)=>{
 // create a function called biggestNumberInArray() that takes
 // an array as a parameter and returns the biggest number.
 // biggestNumberInArray([-1,0,3,100, 99, 2, 99]) should return 100;
-// Use at least 3 different types of javascript loops to write this:
+// Use at least 2 different types of javascript loops to write this:
 const arr = [-1,0,3,100, 99, 2, 99] // should return 100
 const arr2 = ['a', 3, 4, 2] // should return 4
 const arr3 = [] // should return 0
 
 function biggestNumberInArray(arr) {
-
+    if(arr.length === 0) return 0;
+    let maxNumb = arr[0];
+    arr.forEach( (item) => {
+      maxNumb = maxNumb > item ? maxNumb : item;
+    })
+    return maxNumb;
 }
+
+console.log(biggestNumberInArray(arr));
 
 function biggestNumberInArray2(arr) {
 
-}
-
-function biggestNumberInArray3(arr) {
 
 }
+
