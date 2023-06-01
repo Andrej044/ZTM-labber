@@ -148,10 +148,27 @@ function checkBasket(basket, lookingFor) {
 const messArray = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 
 const cleanArrayFunc = (arr) => {
-  const cleanedArray = arr.sort((a,b) => a-b).map( item => { 
-    
-  });
+  arr.sort((a,b) => a-b); // sorted array from min to max;
+  let cleanedArray = [];
+  let newArr = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === arr[i+1]){
+      newArr.push(arr[i]);
+  } else {  
+      newArr.length > 0 ? cleanedArray.push(newArr):null; 
+      cleanedArray.push(arr[i]);
+      newArr = []; 
+  }
+  }
+  
+  cleanedArray.map( (item, index) => {
+    if(Array.isArray(item)){
+      item.push(cleanedArray[index+1]);      
+      cleanedArray.splice(index+1, 1);
+    }
+  })
   return cleanedArray
 }
 
-cleanArrayFunc(messArray);
+console.log(cleanArrayFunc(messArray));
