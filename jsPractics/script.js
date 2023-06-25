@@ -208,6 +208,8 @@ const urls = [
   "https://jsonplaceholder.typicode.com/albums",
 ];
 
+// Solution 
+
 const getData = async function () {
   const [users, posts, albums] = await Promise.all(
     urls.map(async function(url){
@@ -223,10 +225,28 @@ const getData = async function () {
 // getData()
 
 // #3)Add a try catch block to the #2 solution in order to catch any errors. // Now, use the given array containing an invalid url, so you console.log  //your error with 'oooooops'.
-// const urls = [
-//   "https://jsonplaceholder.typicode.com/users",
-//   "https://jsonplaceholdeTYPO.typicode.com/posts",
-//   "https://jsonplaceholder.typicode.com/albums",
-// ];
+const typoUrls = [
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholdeTYPO.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums",
+];
 
+// Solution 
 
+const getData1 = async function () {
+  try{
+
+    const [users, posts, albums] = await Promise.all(
+      typoUrls.map(async function(url){
+        const data = await fetch(url);
+        return data.json();
+      })
+      );
+      console.log("users", users);
+      console.log("posta", posts);
+      console.log("albums", albums);
+    } catch(err){
+      console.log("Something going wrong: " + err)
+    }
+};
+// getData1()
