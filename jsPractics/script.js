@@ -176,5 +176,3 @@ const cleanArrayFunc = (arr) => {
   })
   return cleanedArray
 }
-
-console.log(cleanArrayFunc(messArray));
